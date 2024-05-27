@@ -1,0 +1,26 @@
+body{
+    background-color: grey;
+}
+.card{
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+.cards{
+    display: flex;
+}
+.weather_cards{
+    font-size: 14px;
+    display: flex;
+    flex-wrap:wrap;
+}
+.inner_cards{
+    border: 2cm;
+    padding: 4px;
+    margin: 10px;
+    background-color: white;
+}
+.th{
+    margin-right: 20px;
+}
