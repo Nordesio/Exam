@@ -1,3 +1,4 @@
-1) в манифест добавить новый активити
+1) в манифест добавить новый активити <activity android:name=".AirplaneListActivity"></activity>
 2)добавить все layout
 3)добавить все классы
+4)в builde.gradle добавить implementation("com.google.code.gson:gson:2.8.8")
