@@ -78,10 +78,10 @@ class Program
         g.AddEdge(2, 3);
         g.AddEdge(3, 3);
 
-        Console.WriteLine("Breadth First Traversal (starting from vertex 2):");
+        Console.WriteLine("Обход в ширину (старт из вершины 2):");
         g.BFS(2);
 
-        Console.WriteLine("Depth First Traversal (starting from vertex 2):");
+        Console.WriteLine("Обход в глубину (старт из вершины 2):");
         g.DFS(2);
     }
 }
