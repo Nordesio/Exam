@@ -3,4 +3,10 @@
     <string name="report_available">Доступно</string>
     <string name="report_rented">На руках</string>
     <string name="report_scrapped">Списано</string>
+    <string name="addButton">Добавить</string>
+    <string name="rentButton">Арендовать</string>
+    <string name="scrapButton">Слить</string>
+    <string name="reportButton">Показать отчет</string>
+    <string name="exportButton">Экспортировать</string>
+    <string name="importButton">Импортировать</string>
 </resources>

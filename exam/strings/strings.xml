@@ -3,4 +3,10 @@
     <string name="report_available">Available</string>
     <string name="report_rented">Rented</string>
     <string name="report_scrapped">Scrapped</string>
+    <string name="addButton">Add Car</string>
+    <string name="rentButton">Rent Car</string>
+    <string name="scrapButton">Scrap Car</string>
+    <string name="reportButton">Show report</string>
+    <string name="exportButton">Export to json</string>
+    <string name="importButton">Import form json</string>
 </resources>

@@ -1,0 +1,31 @@
+<!-- fragment_edit_car.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editCarIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Car ID"/>
+
+    <EditText
+        android:id="@+id/editCarStatusInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Car Status"/>
+
+    <EditText
+        android:id="@+id/editClientNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Client Name"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"/>
+</LinearLayout>

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -80,14 +81,24 @@ public class CarListFragment extends Fragment {
         importButton.setOnClickListener(v -> {
             importDataFromJson();
         });
-
+        carAdapter.setOnItemClickListener(car -> openEditCarFragment(car));
         return view;
     }
     private void exportDataToJson() {
         String json = carRentalManager.exportToJson();
             saveJsonToFile(json);
     }
+    private void openEditCarFragment(Car car) {
+        // Создайте новый экземпляр фрагмента для редактирования и передайте в него выбранный автомобиль
+        EditCarFragment editCarFragment = new EditCarFragment();
+        editCarFragment.setCar(car);
 
+        // Замените текущий фрагмент на фрагмент для редактирования
+        FragmentTransaction transaction = requireFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, editCarFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
     private void saveJsonToFile(String json) {
         try {
             File file = new File(getContext().getExternalFilesDir(null), "car_data.json");

@@ -3,6 +3,7 @@ package com.example.exam2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,11 +12,13 @@ import java.util.List;
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
 
     private List<Car> cars;
-
+    private OnItemClickListener listener;
     public CarAdapter(List<Car> cars) {
         this.cars = cars;
     }
-
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
     @NonNull
     @Override
     public CarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -29,6 +32,11 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
         holder.carIdTextView.setText(car.getId());
         holder.carStatusTextView.setText(car.getStatus());
         holder.clientNameTextView.setText(car.getClientName());
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(car);
+            }
+        });
     }
 
     @Override
