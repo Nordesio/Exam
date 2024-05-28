@@ -1,48 +1,11 @@
-<!-- activity_main.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextAirplane"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Введите название самолета" />
-
-    <Button
-        android:id="@+id/buttonAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Добавить" />
-
-    <Button
-        android:id="@+id/buttonExport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Экспортировать" />
-
-    <Button
-        android:id="@+id/buttonImport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Импортировать" />
-    <Button
-        android:id="@+id/buttonViewList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Перейти к фильтру"
-        android:layout_marginTop="8dp" />
-
-    <ListView
-        android:id="@+id/listViewAirplanes"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
     <FrameLayout
-        android:id="@+id/fragmentContainer"
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="match_parent"/>
 </LinearLayout>
